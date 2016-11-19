@@ -6,7 +6,7 @@ import {ProductFilterPipe} from './product-filter.pipe';
     selector: 'pm-products',
     moduleId: module.id,
     templateUrl: 'product-list.component.html',
-    styleUrls: ['product-list.component.css'] 
+    styleUrls: ['product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
     pageTitle : string = 'Product List';
@@ -57,6 +57,10 @@ toggleImage(): void {
     this.showImage = !this.showImage;
 }
 
+onRatingClicked(message: string): void {
+    console.log('Clicked!');
+    this.pageTitle = 'Product list: ' + message;
+}
 
 
 }
